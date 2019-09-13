@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Form page to handle deletion of TO-DOs.
+
+@author Mohammad Shoeb
+-->
+<html>
+    <head>
+        <title>Delete a TO-DO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../resources/css/master.css">
+    </head>
+    <body>
+        <nav>
+            <img id="logo" src="../resources/images/Logo.svg" alt="logo" draggable="false">
+            <section id="buttons">
+            <a href="todo.html">Add a TO-DO</a>
+            <a href="../resources/php/viewToDo.php">View your TO-DO list</a>
+            </section>
+            <section id="login">
+                <a href="../resources/php/logout.php">Log Out</a>
+            </section>
+        </nav>
+        <main id="page-wrapper">
+            <h1>Delete a record</h1>
+            <form name="delete" action="../resources/php/delete.php" method="POST">
+                Select the option by which to delete a record: <br>
+                <select name="deleteby">
+                    <option value="description">Description</option>
+                    <option value="priority">Priority</option>
+                    <option value="due_date">Due Date</option>
+                </select><br><br>
+                Value to be deleted:<input type="text" name="condition" required><br><br>
+                <input type="submit" Value="Delete">
+                <br><br>
+                <button id="a"><a href="../resources/php/employee.php">Go Back</a></button>
+            </form>  
+        </main>
+        <footer>TrueBlu 2019 &#169; Essa Tahir, Gregory Knott, Jerome Martina, Mohammad Shoeb, Willem Wantenaar</footer>
+    </body>
+</html>
